@@ -1,4 +1,5 @@
-/*Top 10 countries in terms of customer number*/
+-- Top 10 countries in terms of customer number:
+
 SELECT D.country, COUNT(A.customer_id) AS customer_number
 FROM customer A
 JOIN address B ON A.address_id = B.address_id
