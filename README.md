@@ -9,5 +9,5 @@ The key questions answered in the project are:
 - Which countries are Rockbuster customers based in?
 - Where are customers with a high lifetime value based?
 # Data
-The data set contains information about Rockbuster’s film inventory, customers, and payments, among other things.
+The [dataset](http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip) contains information about Rockbuster’s film inventory, customers, and payments, among other things.
 <br>The data dictionary is available [here](https://1drv.ms/b/s!AqIQFOBxT18ogr9GyOM8GgWg07X5zQ?e=QCUt9o).
