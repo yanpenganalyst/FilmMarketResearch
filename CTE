@@ -2,7 +2,7 @@ Top 10 paying customers:
 
 WITH customer_rank_cte (customer_id, total_amount) AS
 	(SELECT customer_id, 
-          SUM(amount) total_amount
+                SUM(amount) total_amount
 	FROM payment
 	GROUP BY customer_id)
 SELECT A.customer_id,
