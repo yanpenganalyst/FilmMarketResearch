@@ -10,4 +10,4 @@ The key questions answered in the project are:
 - Where are customers with a high lifetime value based?
 # Data
 The data set contains information about Rockbuster’s film inventory, customers, and payments, among other things.
-The data dictionary is available [here](https://1drv.ms/b/s!AqIQFOBxT18ogr9GyOM8GgWg07X5zQ?e=QCUt9o).
+<br>The data dictionary is available [here](https://1drv.ms/b/s!AqIQFOBxT18ogr9GyOM8GgWg07X5zQ?e=QCUt9o).
