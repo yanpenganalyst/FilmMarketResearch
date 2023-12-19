@@ -1,4 +1,4 @@
--- Top 10 countries in terms of customer number:
+-- Top 10 countries by customer numbers:
 
 SELECT D.country, COUNT(A.customer_id) AS customer_number
 FROM customer A
@@ -7,4 +7,16 @@ JOIN city C ON B.city_id = C.city_id
 JOIN country D ON C.country_ID = D.country_ID
 GROUP BY country
 ORDER BY customer_number DESC
+LIMIT 10;
+
+-- Top 10 countries by total amount of payment:
+
+SELECT E.country, SUM(A.amount) AS total_amount
+FROM payment A
+JOIN customer B ON A.customer_id = B.customer_id
+JOIN address C ON B.address_id = C.address_id
+JOIN city D ON C.city_id = D.city_id
+JOIN country E ON D.country_id = E.country_id
+GROUP BY E.country
+ORDER BY total_amount DESC
 LIMIT 10;
