@@ -9,4 +9,4 @@ The key questions the project aims to answer are:
 - Which countries are Rockbuster customers based in?
 - Where are customers with a high lifetime value based?
 - Do sales figures vary between geographic regions?
-- # Data
+# Data
