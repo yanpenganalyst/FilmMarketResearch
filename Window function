@@ -1,0 +1,12 @@
+-- Total amount paid by each customer and its deviation from the average:
+
+WITH total_amount_customer_cte (customer_id, total_amount) AS
+	(SELECT customer_id,
+	 SUM(amount) total_amount 
+	 FROM payment
+	 GROUP BY customer_id)
+SELECT customer_id,
+	     total_amount,
+	     total_amount - AVG(total_amount) OVER () AS deviation
+FROM total_amount_customer_cte
+ORDER BY customer_id;
