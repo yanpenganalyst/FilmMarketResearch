@@ -1,3 +1,4 @@
+Below are two queries with table joins:
 -- Top 10 countries by customer numbers:
 
 SELECT D.country,
