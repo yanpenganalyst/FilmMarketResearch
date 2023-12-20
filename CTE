@@ -1,3 +1,4 @@
+Here are two queries with a common table expression:
 -- Top 10 paying customers:
 
 WITH customer_rank_cte (customer_id, total_amount) AS
