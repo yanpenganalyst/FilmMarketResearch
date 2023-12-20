@@ -1,4 +1,14 @@
-Below are two queries with table joins:
+Below are three queries with table joins:
+-- Calculation of revenue generated for each film category:
+
+SELECT C.name,
+	 SUM(A.rental_duration * A.rental_rate) AS revenue_per_category
+FROM film A
+JOIN film_category B on A.film_id = B.film_id
+JOIN category C on B.category_id = C.category_id
+GROUP BY C.name
+ORDER BY revenue_per_category DESC;
+
 -- Top 10 countries by customer numbers:
 
 SELECT D.country,
