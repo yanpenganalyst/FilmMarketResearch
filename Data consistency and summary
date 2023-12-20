@@ -1,0 +1,30 @@
+###Checking for duplicates in the film table:
+
+SELECT title,
+       release_year,
+       COUNT(*)
+FROM film
+GROUP BY title, release_year
+HAVING COUNT(*) >1;
+
+
+-- Film table summary:
+
+SELECT COUNT (DISTINCT film_id) AS count_film,
+       COUNT (DISTINCT language_id) AS count_lang,
+       COUNT(*) AS count_rows,
+       AVG(rental_rate) AS avg_rent,
+       MIN(rental_rate) AS min_rent,
+       MAX(rental_rate) AS max_rent,
+       MODE() WITHIN GROUP (ORDER BY special_features) AS modal_special_features
+FROM film;
+
+-- Consistency check on the customer table:
+
+SELECT LOWER(first_name), LOWER(last_name), address_id, COUNT(*) FROM customer
+GROUP BY LOWER(first_name), LOWER(last_name), address_id
+HAVING COUNT(*) >1; 
+
+SELECT email FROM customer
+WHERE email NOT LIKE '%@%'; 
+
