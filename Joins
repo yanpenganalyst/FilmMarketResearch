@@ -9,3 +9,16 @@ JOIN country D ON C.country_ID = D.country_ID
 GROUP BY country
 ORDER BY customer_number DESC
 LIMIT 10;
+
+-- Top 10 countries by total amount of payment:
+
+SELECT E.country,
+       SUM(A.amount) AS total_amount
+FROM payment A
+JOIN customer B ON A.customer_id = B.customer_id
+JOIN address C ON B.address_id = C.address_id
+JOIN city D ON C.city_id = D.city_id
+JOIN country E ON D.country_id = E.country_id
+GROUP BY E.country
+ORDER BY total_amount DESC
+LIMIT 10;
