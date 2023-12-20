@@ -1,4 +1,5 @@
-###Checking for duplicates in the film table:
+Here are a few sample queries:
+-- Checking for duplicates in the film table:
 
 SELECT title,
        release_year,
@@ -7,8 +8,25 @@ FROM film
 GROUP BY title, release_year
 HAVING COUNT(*) >1;
 
+-- Consistency check on the customer table:
+       -- Duplicates:
+
+SELECT LOWER(first_name),
+       LOWER(last_name),
+       address_id,
+       COUNT(*)
+FROM customer
+GROUP BY LOWER(first_name), LOWER(last_name), address_id
+HAVING COUNT(*) >1; 
+
+       -- Email format:
+
+SELECT email
+FROM customer
+WHERE email NOT LIKE '%@%';
 
 -- Film table summary:
+       -- Query 1:
 
 SELECT COUNT (DISTINCT film_id) AS count_film,
        COUNT (DISTINCT language_id) AS count_lang,
@@ -19,12 +37,13 @@ SELECT COUNT (DISTINCT film_id) AS count_film,
        MODE() WITHIN GROUP (ORDER BY special_features) AS modal_special_features
 FROM film;
 
--- Consistency check on the customer table:
+       -- Query 2:
 
-SELECT LOWER(first_name), LOWER(last_name), address_id, COUNT(*) FROM customer
-GROUP BY LOWER(first_name), LOWER(last_name), address_id
-HAVING COUNT(*) >1; 
+SELECT rating,
+       COUNT (rating) AS count_rating
+FROM film
+GROUP BY rating
+ORDER BY count_rating DESC;
 
-SELECT email FROM customer
-WHERE email NOT LIKE '%@%'; 
+
 
