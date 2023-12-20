@@ -1,3 +1,4 @@
+Below is one query with a common table expression and a window function:
 -- Total amount paid by each customer and its deviation from the average:
 
 WITH total_amount_customer_cte (customer_id, total_amount) AS
