@@ -18,7 +18,7 @@ JOIN country E ON D.country_id = E.country_id
 ORDER BY A.total_amount DESC
 LIMIT 10;
 
--- Countries that the top 100 paying customers are based in:
+-- Country distribution of the top 100 paying customers:
 
 SELECT country,
        COUNT(customer_id) AS top_customer_number
