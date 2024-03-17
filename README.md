@@ -10,5 +10,3 @@ The key questions answered in the project are:
 ### Data
 The [dataset](http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip) contains information about Rockbuster’s film inventory, customers, and payments, among other things.
 <br>Data dictionary is available [here](https://1drv.ms/b/s!AqIQFOBxT18ogr9GyOM8GgWg07X5zQ?e=QCUt9o).
-### Resources
-[Tableau visualization](https://public.tableau.com/app/profile/yan.peng5682/viz/RockbusterTop10Countries_16979147694200/Sheet1?publish=yes)
